@@ -1,0 +1,14 @@
+<!ELEMENT videoclub (peliculas, juegos)>
+<!ELEMENT peliculas (pelicula+)>
+<!ELEMENT pelicula (nombre, extranjera?, genero, precio, (disponible | agotada))>
+<!ELEMENT disponible EMPTY>    
+<!ELEMENT agotada EMPTY>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT genero (#PCDATA)>
+<!ELEMENT precio (#PCDATA)> 
+<!ELEMENT extranjera EMPTY>
+<!ELEMENT oferta (#PCDATA | peliculasReferidas)*>
+<!ELEMENT peliculasReferidas ANY>
+<!ELEMENT ofertas (#PCDATA)>
+
+                    

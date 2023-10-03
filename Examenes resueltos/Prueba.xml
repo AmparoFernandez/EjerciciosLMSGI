@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE videoclub SYSTEM "Prueba.dtd">
+
+<videoclub nombre= Sensacine direccion= Calle La Patica telefono= 9576606070>
+    <peliculas>
+<pelicula>
+    <nombre> Big Hero Six </nombre>
+    <extranjera />
+    <genero> Fantasía </genero>
+    <precio> 6 </precio>
+    <disponible />
+</pelicula>
+<pelicula>
+    <nombre> Rompe Ralph </nombre>
+    <extranjera />
+    <genero> Fantasía </genero>
+    <precio> 6 </precio>
+    <alquilada />
+</pelicula>
+<ofertas></ofertas>
+    </peliculas>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</videoclub>
