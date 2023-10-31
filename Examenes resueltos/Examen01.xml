@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE videoclub SYSTEM "Examen01.dtd">
-<videoclub direccion="Calle La Patica" nombre="Sensacine" telefono="957405033">
-  <peliculas>
-    <pelicula codigo="her" ingredientePrincipal="queso">
+<videoclub direccion="Calle La Patica" nombre="Sensacine" telefono="957591456">
+<peliculas>
+    <pelicula codigo="her" actorPrincipal="mujer">
       <nombre> Hércules </nombre>
       <genero> Fantasía </genero>
       <precio coste="10" />
@@ -14,10 +14,10 @@
       <precio coste="7" />
       <disponible/>
     </pelicula>
-  </platos>
-  <ofertas>
-    <oferta coste="15">2x1 
-      <peliculaReferida codigoPelicula="ques" bonoPareja="her ins" />
-    </oferta>
-  </ofertas>
-  </peliculas>
+    </platos>
+    <ofertas>
+     <oferta coste="15">2x1 
+       <peliculaReferida codigoPelicula="ques" bonoPareja="her ins" />
+      </oferta>
+      </ofertas>
+</peliculas>

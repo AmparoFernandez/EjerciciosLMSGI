@@ -1,0 +1,23 @@
+<!ELEMENT horarios (tren, ofertas)>
+<!ELEMENT tren (vagon+)>
+<!ELEMENT ofertas (oferta*)>
+<!ELEMENT vagon (hora, destino, permiteAnimales?, precio, (mañana | tarde))>
+<!ELEMENT hora (#PCDATA)>
+<!ELEMENT destino (#PCDATA)>
+<!ELEMENT permiteAnimales EMPTY>
+<!ELEMENT precio EMPTY>
+<!ELEMENT mañana EMPTY>
+<!ELEMENT tarde EMPTY>
+<!ELEMENT oferta (#PCDATA | descuentoEstudiantes)*>
+<!ELEMENT descuentoEstudiantes ANY>
+<!ATTLIST horarios empresa CDATA #IMPLIED
+                      dirección CDATA #REQUIRED
+                      telefono CDATA #FIXED "957609066">
+<!ATTLIST vagon codigo ID #REQUIRED
+                numeroVagon (1 | 2 | 3) "1">
+<!ATTLIST descuentoEstudiantes codigoVagon IDREF #REQUIRED
+                        packAhorro IDREFS #IMPLIED>
+<!ENTITY % atributoCoste "coste CDATA #IMPLIED"> 
+<!ATTLIST precio %atributoCoste;>
+<!ATTLIST oferta %atributoCoste;>
+<!ENTITY trasbordo "Hace trasbordo durante el viaje">

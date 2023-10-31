@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE horarios SYSTEM "Examen.dtd">
+<horarios empresa="Renfe" dirección="Calle Gran Avenida" telefono="957609066">
+  <tren>
+    <vagon codigo="vag1" numeroVagon="1">
+      <hora> 8.00 am &trasbordo;</hora>
+      <destino> Madrid </destino>
+      <permiteAnimales/>
+      <precio coste="25" />
+      <mañana />
+    </vagon>
+    <vagon codigo="vag2" numeroVagon="2">
+      <hora> 18.00 pm </hora>
+      <destino> Barcelona </destino>
+      <precio coste="50" />
+      <tarde />
+    </vagon>
+  </tren>
+  <ofertas>
+    <oferta coste="30">2x1 
+        <descuentoEstudiantes codigoVagon="vag1" packAhorro="vag1 vag2" />
+      </oferta>
+    </ofertas>
+</horarios>
