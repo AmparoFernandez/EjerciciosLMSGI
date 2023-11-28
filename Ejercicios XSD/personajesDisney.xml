@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<disney xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="personajesDisney.xsd">
+ Un montón de personajes Disney
+ <pelicula nombre="Lilo y Stitch" countPersonajes="3">
+  <protagonistas nombre="Lilo" nacionalidad="Hawaiana"/>
+  <protagonistas nombre="Stitch" nacionalidad="Extraterrestre" experimento= "626"/>
+  <protagonistas nombre="Dr.Jumba" nacionalidad="Extraterrestre"/>
+  <antagonistas nombre="Reuben" nacionalidad="Extraterrestre" experimento="625"/>
+  <antagonistas nombre="Gantu" nacionalidad="Extraterrestre"/>
+ </pelicula>
+ <produccion>
+    <animacion>
+      <animada/>
+  </animacion>
+  <estreno> 2020 </estreno>
+ </produccion>
+</disney>

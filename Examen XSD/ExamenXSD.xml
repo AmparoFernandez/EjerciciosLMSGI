@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zoologico xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="ExamenXSD.xsd">
+    Animales que habitan en el Zoológico
+    <animal nombre="Tigres" countAnimales="3">
+        <especie nombre="Tigre de Bengala" color="naranja"/>
+        <especie nombre="Tigre Blanco" color="blanco"/> 
+        <cachorro nombre="Simba" nacimiento="2023-09-23"/>
+      </animal>
+    <habitats>
+        <habitat nombre="Bosque Tropical">
+          <cantidadAnimales numero="35"></cantidadAnimales>
+        </habitat>
+        <habitat nombre="Desierto">
+          <trabajadoresEnLugar oficio="Encargado de mantenimiento"> 15 </trabajadoresEnLugar>
+        </habitat>
+    </habitats>
+</zoologico>

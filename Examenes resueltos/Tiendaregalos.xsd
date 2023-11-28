@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="tiendas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="tienda" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" type="xs:string"/>
+              <xs:element name="regalos">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:choice minOccurs="0" maxOccurs="unbounded">
+                      <xs:element name="regalo">
+                        <xs:complexType>
+                          <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                              <xs:attribute name="codigo" type="xs:string" use="required"/>
+                              <xs:attribute name="precio" type="xs:decimal" use="required"/>
+                              <xs:attribute name="iva" type="xs:decimal" use="required"/>
+                              <xs:attribute name="descuento" type="xs:string" use="required"/>
+                            </xs:extension>
+                          </xs:simpleContent>
+                          <xs:sequence>
+                            <xs:element name="url">
+                              <xs:complexType>
+                                <xs:simpleContent>
+                                  <xs:extension base="xs:string">
+                                    <xs:attribute name="tipo" type="xs:string" use="required"/>
+                                  </xs:extension>
+                                </xs:simpleContent>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="marca">
+                              <xs:complexType>
+                                <xs:choice>
+                                  <xs:element name="mattel"/>
+                                  <xs:element name="giochiPreziosi"/>
+                                  <!-- Agrega aquí otras marcas posibles -->
+                                </xs:choice>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                      <xs:element name="bombazo">
+                        <xs:complexType>
+                          <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                              <xs:attribute name="codigo" type="xs:string" use="required"/>
+                            </xs:extension>
+                          </xs:simpleContent>
+                          <xs:sequence>
+                            <xs:element name="url">
+                              <xs:complexType>
+                                <xs:simpleContent>
+                                  <xs:extension base="xs:string">
+                                    <xs:attribute name="tipo" type="xs:string" use="required"/>
+                                  </xs:extension>
+                                </xs:simpleContent>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:choice>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="cif" type="xs:string" use="required"/>
+            <xs:attribute name="descuentosAplicables" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="zoologico" type="tipoZoologico"/>
+
+  <xs:complexType name="tipoZoologico" mixed="true">
+    <xs:all>
+      <xs:element name="animal" type="tipoAnimal"/>
+      <xs:element name="habitats" type="tipoHabitats"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="tipoAnimal">
+    <xs:sequence>
+      <xs:element name="especie" type="tipoEspecie" maxOccurs="unbounded"/>
+      <xs:element name="cachorro" type="tipoCachorro" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="nombre" type="xs:string"/>
+    <xs:attribute name="countAnimales" type="xs:integer"/>
+  </xs:complexType>
+
+  <xs:simpleType name="tipoNombreEspecie">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Tigre de Bengala"/>
+      <xs:enumeration value="Tigre Blanco"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoColor">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(blanco|naranja|negro|marron)"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="tipoHabitats">
+    <xs:sequence>
+      <xs:element name="habitat" type="tipoHabitat" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipoHabitat">
+    <xs:choice>
+      <xs:element name="cantidadAnimales" type="tipoCantidadAnimales"/>
+      <xs:element name="trabajadoresEnLugar" type="tipoTrabajadoresEnLugar"/>
+    </xs:choice>
+    <xs:attribute name="nombre" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="tipoTrabajadoresEnLugar">
+    <xs:simpleContent>
+      <xs:extension base="numericoEntre0y100">
+        <xs:attribute name="oficio" type="tipoOficio"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="numericoEntre0y10000">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="10000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="numericoEntre0y100">
+    <xs:restriction base="numericoEntre0y10000">
+      <xs:maxInclusive value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="tipoCantidadAnimales">
+    <xs:attribute name="numero" type="numericoEntre0y10000"/>
+  </xs:complexType>
+
+  <xs:simpleType name="tipoCuidadorAnimales">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Veterinario"/>
+      <xs:enumeration value="Encargado de mantenimiento"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoPersonalSeguridad">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Portero"/>
+      <xs:enumeration value="Vigilante"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoOficio">
+    <xs:union memberTypes="tipoCuidadorAnimales tipoPersonalSeguridad"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoOficios">
+    <xs:list itemType="tipoOficio"/>
+  </xs:simpleType>
+
+  <xs:complexType name="tipoCachorro">
+    <xs:attribute name="nombre" type="xs:string"/>
+    <xs:attribute name="nacimiento" type="xs:date"/>
+  </xs:complexType>
+
+  <xs:complexType name="tipoEspecie">
+    <xs:complexContent>
+      <xs:extension base="tipoCachorro">
+        <xs:attribute name="color" type="tipoColor"/>
+          </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+
+</xs:schema>
