@@ -7,7 +7,7 @@ xsi:noNamespaceSchemaLocation="crepusculo.xsd">
     <miembro nombre="Jörg" nacionalidades="EEUU Peruana Española Británica"/>
     <miembro nombre="Ursula"/>
     <mascota nombre="Princesa"/>
-  </familia>
+  </familia>  
   <lugares>
     <lugar nombre="">
       <acontecimiento anio="2021"></acontecimiento>
