@@ -3,45 +3,85 @@
     <head>
         <title> Tabla de Superhéroes de DC </title>
         <style type="text/css">
+      body {
+        background-image: url(https://i.pinimg.com/736x/17/97/61/1797611d7fe71dcc13fff99dc3266ce8.jpg);
+        text-align: center;
+          }
       table {
-        border-style: inherit;
-        border-color: darkorange;
+        border-style: collapse;
+        border-color: #000000;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: hwb(0 100% 0%);
+        border-radius: 5px;
       }
       th {
-            text-align: left;
             padding: 10px;
+            background-color: hwb(0 17% 12%);
+            border-radius: 5px;
       }
       td {
             padding: 10px;
+            border-radius: 5px;
       }
-        img {
-  			margin:3px;     
-  			border:1px solid #000000;  
+      .centrar {
+        text-align: center;
+      }
+		  img:hover {
+			    transform: scale(1.5);
+          transition: 1s;
   		}
-		img:hover {
-			transform: scale(1.1);
-  		}
-      p{
-            line-height: 1.5em;
-        }
+      h1 {
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: aliceblue;
+        font-size: xx-large;
+        background-color: #000000;
+        border-radius: 5px;
+      }
+
+   
 
     </style>
     </head>
 
 <body>
-	<h1>Superhéroes de DC</h1>
-	<table width="75%" border="1">
+  <h1>Superhéroes de DC</h1>
+	<table width="100%" border="1">
       <tr>
-        <th>Batman</th>
+        <th>Superhéroe</th>
+        <th>Poderes</th>
+        <th>Imagen</th>
+        <th>Biografía</th>
+      </tr>
+      <tr>
+        <td rowspan="2">Batman</td>
         <td>Inteligencia, habilidades de detective, habilidades marciales.</td>
+        <td class="centrar" rowspan="2"><img src="https://i.pinimg.com/originals/03/8b/76/038b76ccd3adc77346bf62b84f92d78d.jpg" height="150px"></td>
+        <td class="info" rowspan="2"><a target="_blank" href="https://es.wikipedia.org/wiki/Batman">Más sobre Batman</a></td>
       </tr>
       <tr>
-        <th>>Hulk</th>
-        <td>Conocido en espa&ntilde;ol como &quot;La Masa&quot; (traducci&oacute;n literal del vocablo &quot;Hulk&quot;), se trata del alterego del cient&iacute;fico Bruce Banner, quien se expone a un alto nivel de radiaci&oacute;n Gamma y a partir de ese momento, cuando el humano es alterado, se transforma de inmediato en un ser con una fuerza que rivaliza con la del propio Superm&aacute;n.</td>
+        <td>Alias: El Caballero Oscuro</td>
       </tr>
       <tr>
-        <td><a href="http://es.wikipedia.org/wiki/Iron_Man">Iron Man</a></td>
-        <td>Un multimillonario, empresario e ingeniero, Tony Stark sufre una lesi&oacute;n en el pecho durante un secuestro en el que sus captores tratan de obligarlo a construir un arma de destrucci&oacute;n masiva. &Eacute;l crea en su lugar una poderosa armadura para salvar su vida y escapar de su cautiverio. Luego utiliza la armadura para proteger al mundo como Iron Man.</td>
+        <td>Superman</td>
+        <td>Vuelo, super fuerza, visión de rayos X</td>
+        <td class="centrar"><img src="https://www.previewsworld.com/SiteImage/MainImage/STL138524.jpg" height="150px"></td>
+        <td><a target="_blank" href="https://es.wikipedia.org/wiki/Superman">Más sobre Superman</a></td>
+      </tr>
+      <tr>
+        <td>Wonderwoman</td>
+        <td>Fuerza sobrehumana, habilidades de lucha, lazos de la verdad</td>
+        <td class="centrar" ><img src="https://www.previewsworld.com/SiteImage/MainImage/STL138525.jpg" height="150px"></td>
+        <td><a target="_blank" href="https://es.wikipedia.org/wiki/Mujer_Maravilla">Más sobre Wonderwoman</a></td>
+      </tr>
+      <tr>
+        <td rowspan="2">Flash</td>
+        <td>Velocidad sobrehumana, curvatura del tiempo</td>
+        <td class="centrar" rowspan="2"><img src="https://m.media-amazon.com/images/I/61poZyGmyEL._AC_UF894,1000_QL80_.jpg" height="150px"></td>
+        <td rowspan="2"><a target="_blank" href="https://es.wikipedia.org/wiki/Flash_(historieta)">Más sobre Flash</a></td>
+      </tr>
+      <tr>
+        <td>Miembro de la Liga de la Justicia</td>
       </tr>
     </table>
 </body> 
